@@ -49,7 +49,7 @@ namespace Game_Relased_On_Birthday
 
             var httpClient = new HttpClient();
 
-            var request = new HttpRequestMessage(HttpMethod.Get, "https://www.giantbomb.com/api/game/3030-4725/?api_key=[YOUR_KEY_HERE]&format=json&field_list=genres,name");
+            var request = new HttpRequestMessage(HttpMethod.Get, "https://www.giantbomb.com/api/games/?api_key=[API_KEY]&filter=original_release_date:"+ye+'-'+mo+'-'+da+"&sort=original_release_date&field_list=name");
 
             var productValue = new ProductInfoHeaderValue("GitHubProject", "1.0");
             var commentValue = new ProductInfoHeaderValue("(+https://github.com/Jonapop/Birthday-Game-Release)");
